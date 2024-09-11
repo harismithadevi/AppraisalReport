@@ -2,9 +2,11 @@
 
 This project is an Appraisal Report System developed using ASP.NET and C# with Microsoft SQL Server as the database backend. The system is designed to manage and generate appraisal reports for college staff. It features an Admin and User side, where users can generate Crystal Reports in PDF format.
 
+
 ### This project is part of my individual final project for the Visual Programming course in my MSc.
 
-Features
+
+#### Features
 
 Admin Side:
 
