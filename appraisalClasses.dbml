@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="pcsa107" Class="appraisalClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=HARISH\SQLEXPRESS;Initial Catalog=pcsa107;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="pcsa107ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Login" Member="Logins">
+    <Type Name="Login">
+      <Column Name="EmpID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Login_GeneralInfo" Member="GeneralInfo" ThisKey="EmpID" OtherKey="EmpID" Type="GeneralInfo" Cardinality="One" />
+      <Association Name="Login_Achievement" Member="Achievement" ThisKey="EmpID" OtherKey="EmpID" Type="Achievement" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GeneralInfo" Member="GeneralInfos">
+    <Type Name="GeneralInfo">
+      <Column Name="EmpID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DoB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Edu_Qualification" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Specialization" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DoA" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PhoneAlt" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Login_GeneralInfo" Member="Login" ThisKey="EmpID" OtherKey="EmpID" Type="Login" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Achievements" Member="Achievements">
+    <Type Name="Achievement">
+      <Column Name="EmpID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Experience" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Research" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Book_Chapters" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Paper_Presented" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Conference" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Publications" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Projects" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Awards" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Login_Achievement" Member="Login" ThisKey="EmpID" OtherKey="EmpID" Type="Login" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

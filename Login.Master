@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="Appraisal.Login" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <script type="text/javascript" language="javascript">
+        function DisableBackButton() {
+            window.history.forward()
+        }
+        DisableBackButton();
+        window.onload = DisableBackButton;
+        window.onpageshow = function (evt) { if (evt.persisted) DisableBackButton() }
+        window.onunload = function () { void (0) }
+    </script>
+    <style type="text/css">
+        .Buttons{
+            height: 50px;
+            width: 170px;             
+        }
+        TextBox{
+            resize: none;
+            font-family: metropolis;
+            font-size: large;
+        }
+        .auto-style1 {
+            text-align: center;
+        }
+        body{
+            font-family: metropolis;
+        }
+        .menu-style2 {
+            margin:0 auto;
+            font-size: large;
+            font-family: "Metropolis Semi Bold";
+        }
+        .footer {
+            background-color: #5090A6;
+            height: 20%;
+        }
+        .header {
+            background-color: #5090A6;
+        }
+        .tdcenter{
+            text-align: center;
+            align-items: center;
+        }
+        .tdleft{
+            text-align:left;
+        }
+        .auto-style2 {
+            background-color: #A55087;
+        }
+        .auto-style3 {
+            margin: 0 auto;
+            font-size: large;
+            font-family: "Metropolis Semi Bold";
+            background-color: #A55087;
+        }
+        .auto-style4 {
+            background-color: #A55087;
+            height: 20%;
+        }
+        .auto-style5 {
+            width: 100%;
+            font-size: large;
+        }
+        .auto-style6 {
+            text-align: right;
+        }
+        .auto-style7 {
+            text-align: right;
+            height: 33px;
+        }
+        .auto-style8 {
+            height: 33px;
+        }
+        .auto-style9 {
+            text-align: right;
+            height: 28px;
+        }
+        .auto-style10 {
+            height: 28px;
+        }
+        .auto-style11 {
+            text-align: right;
+            height: 45px;
+        }
+        .auto-style12 {
+            height: 45px;
+        }
+        .auto-style13 {
+            font-family: metropolis;
+            font-size: large;
+        }
+        .auto-style14 {
+            height: 33px;
+            text-align: center;
+        }
+        .auto-style15 {
+            font-size: x-large;
+        }
+        .auto-style16 {
+            font-family: metropolis;
+            font-size: large;
+            font-weight: bold;
+            background-color: #A55087;
+        }
+
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body onload="window.history.forward();">
+    <form id="form1" runat="server">
+        <div align="center">
+            <asp:Panel ID="Panel1" runat="server" BackColor="#A55087">
+                <asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="~/images/Logo1.png" style="text-align: left" />
+                      <br />
+                <asp:ContentPlaceHolder ID="MenuPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+            <br />
+            </asp:Panel>
+
+            <hr color="#A55087" />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" OnInit="ContentPlaceHolder1_Init">
+            </asp:ContentPlaceHolder>
+            
+            <div>
+                <asp:Panel ID="Panel2" runat="server" BackColor="#A55087">
+                    <p style="text-align: center; font-family: MONTserrat; color: #FFFFFF; font-size: small;">
+                    <br />
+                        CHENNAI UNIVERSITY
+                    <br />
+                        EST.2021</p>
+                    <p style="font-family: montserrat; color: #DDDDDD; text-align: center; font-size: x-small">
+                        Powered By ASP.NET &nbsp;&nbsp;<br />&nbsp;
+                    </p>
+                </asp:Panel>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

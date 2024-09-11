@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Login.Master" AutoEventWireup="true" CodeBehind="AdminNested.master.cs" Inherits="Appraisal.AdminNested" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style17 {
+            width: 100%;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MenuPlaceHolder" runat="server">
+    <asp:Panel ID="MenuPanel3" runat="server" Width="70%">
+            <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Montserrat" Font-Size="0.8em" ForeColor="White" Orientation="Horizontal" StaticSubMenuIndent="10px" style="font-family: Montserrat; font-weight: 700; color: #FFFFFF; font-size: large;">
+                        <DynamicHoverStyle BackColor="White" ForeColor="#A55087" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#C081AA" />
+                        <DynamicSelectedStyle BackColor="#522166" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="HOME" Value="HOME"></asp:MenuItem>
+                            <asp:MenuItem Text="GENERAL" Value="GENERAL">
+                                <asp:MenuItem NavigateUrl="~/CreateLogin.aspx" Text="CREATE LOGIN" Value="CREATE LOGIN"></asp:MenuItem>
+                                <asp:MenuItem Text="VIEW/EDIT INDIVIDUAL STAFF" Value="EDIT STAFF DETAILS" NavigateUrl="~/EditStaff.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/EditAllStaffs.aspx" Text="VIEW/EDIT ALL STAFFS" Value="VIEW/EDIT ALL STAFFS"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="GENERATE REPORT" Value="GENERATE REPORT" NavigateUrl="~/ReportAdmin.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/LoginPage.aspx" Text="LOGOUT" Value="LOGOUT"></asp:MenuItem>
+                        </Items>
+                        <LevelMenuItemStyles>
+                            <asp:MenuItemStyle Font-Bold="True" Font-Names="Montserrat" Font-Size="Large" Font-Underline="False" />
+                        </LevelMenuItemStyles>
+                        <LevelSelectedStyles>
+                            <asp:MenuItemStyle BackColor="#522166" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Size="Large" Font-Bold="True" Font-Names="Montserrat" Font-Underline="False" />
+                        </LevelSelectedStyles>
+                        <LevelSubMenuStyles>
+                            <asp:SubMenuStyle BackColor="#A55087" BorderColor="#A55087" BorderStyle="Solid" BorderWidth="1px" Font-Size="Large" Font-Underline="False" Font-Bold="True"/>
+                        </LevelSubMenuStyles>
+                        <StaticHoverStyle BackColor="White" ForeColor="#A55087" />
+                        <StaticMenuItemStyle BackColor="#C081AA" BorderColor="#A55087" BorderStyle="Solid" BorderWidth="2px" Font-Bold="False" Font-Names="Montserrat SemiBold" Font-Size="Large" ForeColor="White" HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticMenuStyle BackColor="#A55087" />
+                        <StaticSelectedStyle BackColor="#522166" Font-Bold="True" Font-Names="Montserrat" ForeColor="White" />
+                    </asp:Menu>
+                </asp:Panel>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <table align="center" cellpadding="3" class="auto-style17">
+        <tr>
+            <td style="text-align:center;"><strong>
+                <asp:Label ID="Label1" runat="server" Text="Welcome" CssClass="auto-style15"></asp:Label>
+                &nbsp;<em><asp:Label ID="userlbl" runat="server" style="color: #653855" CssClass="auto-style15"></asp:Label>
+                </em></strong></td>
+        </tr>
+    </table>
+    <br />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server">
+</asp:ContentPlaceHolder>
+</asp:Content>

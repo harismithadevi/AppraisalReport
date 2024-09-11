@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Login.Master" AutoEventWireup="true" CodeBehind="MainNested.master.cs" Inherits="Appraisal.MainNested" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MenuPlaceHolder" runat="server">
+    <asp:Panel ID="MenuPanel3" CssClass="menustyle" runat="server" Width="70%" ClientIDMode="Predictable" HorizontalAlign="Center" align="center">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Montserrat" Font-Size="Large" ForeColor="White" Orientation="Horizontal" StaticSubMenuIndent="10px" style="font-weight: 700; color: #FFFFFF; " CssClass="auto-style13">
+                        <DynamicHoverStyle BackColor="White" ForeColor="#A55087" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#C081AA" />
+                        <DynamicSelectedStyle BackColor="#522166" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="HOME" Value="HOME"></asp:MenuItem>
+                            <asp:MenuItem Text="GENERAL" Value="GENERAL">
+                                <asp:MenuItem Text="EDIT GENERAL INFO" Value="GENERAL INFO" NavigateUrl="~/EditGeneralInfo.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="ACHIEVEMENTS" Value="ACHIEVEMENTS" NavigateUrl="~/EditAchievements.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="GENERATE REPORT" Value="GENERATE REPORT" NavigateUrl="~/AppraisalReport.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/LoginPage.aspx" Text="LOGOUT" Value="LOGOUT"></asp:MenuItem>
+                        </Items>
+                        <LevelSelectedStyles>
+                            <asp:MenuItemStyle BackColor="#522166" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Font-Names="Montserrat" Font-Underline="False" />
+                        </LevelSelectedStyles>
+                        <LevelSubMenuStyles>
+                            <asp:SubMenuStyle BackColor="#A55087" BorderColor="#A55087" BorderStyle="Solid" BorderWidth="1px" Font-Underline="False" Font-Bold="True" Font-Size="Large" />
+                        </LevelSubMenuStyles>
+                        <StaticHoverStyle BackColor="White" ForeColor="#A55087" />
+                        <StaticMenuItemStyle BackColor="#C081AA" BorderColor="#A55087" BorderStyle="Solid" BorderWidth="2px" Font-Bold="False" Font-Names="Montserrat SemiBold" Font-Size="Large" ForeColor="White" HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticMenuStyle BackColor="#A55087" />
+                        <StaticSelectedStyle BackColor="#522166" Font-Bold="True" Font-Names="Montserrat" ForeColor="White" />
+                    </asp:Menu>
+                </asp:Panel>
+</asp:Content>
+    
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <table align="center" cellpadding="3" class="auto-style17">
+    <tr>
+        <td>
+                <strong>
+                <asp:Label ID="Label1" runat="server" Text="Welcome" CssClass="auto-style15"></asp:Label>
+                &nbsp;<em><asp:Label ID="userlbl" runat="server" style="color: #653855" CssClass="auto-style15"></asp:Label>
+                </em></strong></td>
+    </tr>
+</table>
+<br />
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
