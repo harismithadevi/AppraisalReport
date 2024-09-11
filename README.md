@@ -8,23 +8,28 @@ Features
 
 Admin Side:
 
-    Manage Users: Admin can add, edit, and delete users (college staff).
-    Appraisal Data Management: Admin can input, update, and review staff appraisal data.
-    Generate Reports: Admin can generate Crystal Reports in PDF for individual staff or all staff appraisals.
+- Manage Users: Admin can add, edit, and delete users (college staff).
+- Appraisal Data Management: Admin can input, update, and review staff appraisal data.
+- Generate Reports: Admin can generate Crystal Reports in PDF for individual staff or all staff appraisals.
 
 User Side:
 
-    View and Update Profile: Users (college staff) can view and update their personal and professional details.
-    Appraisal Submission: Users can fill out and submit their appraisal forms online.
-    Generate Appraisal Report: Users can generate their own appraisal report in PDF format using Crystal Reports.
+- View and Update Profile: Users (college staff) can view and update their personal and professional details.
+- Appraisal Submission: Users can fill out and submit their appraisal forms online.
+- Generate Appraisal Report: Users can generate their own appraisal report in PDF format using Crystal Reports.
 
 Reports
 
-    Crystal Reports in PDF: Both Admin and Users can generate PDF reports of appraisals using Crystal Reports integration.
+- Crystal Reports in PDF: Both Admin and Users can generate PDF reports of appraisals using Crystal Reports integration.
 
 Technologies Used
 
-    ASP.NET Framework (Website from older VS templates)
-    Microsoft SQL Server (Database)
-    Crystal Reports (For generating PDF reports)
-    Bootstrap (For responsive design)
+- ASP.NET Framework (Website from older VS templates)
+- Microsoft SQL Server (Database)
+- Crystal Reports (For generating PDF reports)
+- Bootstrap (For responsive design)
+
+Video Presentation of working of this project
+
+https://drive.google.com/drive/folders/1TjiCL9M_PFwRagc52SQITTagrVE37A6r?usp=drive_link
+
